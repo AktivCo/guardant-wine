@@ -1,0 +1,15 @@
+# Guardant Sign/Time USB
+# (for device created by udev in /dev/bus/usb)
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="0008",	MODE="0666"
+SUBSYSTEM=="usb_device", ACTION=="add", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="0008",	MODE="0666"
+# Guardant Code USB
+# (for device created by udev in /dev/bus/usb)
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="0009",	MODE="0666"
+SUBSYSTEM=="usb_device", ACTION=="add", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="0009",	MODE="0666"
+# Guardant Sign WinUsb
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="00c2", MODE="0666"
+SUBSYSTEM=="usb_device", ACTION=="add", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="00c2",	MODE="0666"
+# Guardant Code WinUsb
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="00c3", MODE="0666"
+SUBSYSTEM=="usb_device", ACTION=="add", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="00c3",	MODE="0666"
+

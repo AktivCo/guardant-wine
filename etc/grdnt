@@ -1,0 +1,20 @@
+#!/bin/sh
+
+test "$ACTION" = "add" || exit 0
+test -n "$DEVICE" -o -n "$DEVNAME" || exit 0 
+
+# race condition in the kernel, $DEVICE might not exist now
+sleep 1
+
+if [ -n "$DEVICE" ]
+then
+	chmod 666 $DEVICE
+	exit 0
+fi
+
+if [ -n "$DEVNAME" ]
+then
+	chmod 666 $DEVNAME
+	exit 0
+fi
+

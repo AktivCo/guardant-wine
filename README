@@ -1,0 +1,13 @@
+
+For hotplug or hotplug-ng:
+
+# cp etc/grdnt.usermap /etc/hotplug/usb/grdnt.usermap
+# cp etc/grdnt /etc/hotplug/usb/grdnt
+
+For udev:
+
+(Vendor ID: 0a89; Product ID: 000c, 000d)
+# cp etc/grdnt_hid.udev /etc/udev/rules.d/95-grdnt_hid.rules
+(Vendor ID: 0a89; Product ID: 0008, 0009, 00c2, 00c3)
+# cp etc/grdnt.udev /etc/udev/rules.d/95-grdnt.rules
+

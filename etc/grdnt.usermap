@@ -1,0 +1,4 @@
+# module             match_flags idVendor idProduct bcdDevice_lo bcdDevice_hi bDeviceClass bDeviceSubClass bDeviceProtocol bInterfaceClass bInterfaceSubClass bInterfaceProtocol driver_info
+grdnt                0x0003      0x0a89   0x0008    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+grdnt                0x0003      0x0a89   0x0009    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
+

@@ -1,0 +1,5 @@
+# Guardant Sign/Time USB HID
+SUBSYSTEM=="usb", ACTION=="add", KERNEL=="hiddev*", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="000c",	NAME="grdhid%n", MODE="0666"
+# Guardant Code USB HID
+SUBSYSTEM=="usb", ACTION=="add", KERNEL=="hiddev*", SYSFS{idVendor}=="0a89", SYSFS{idProduct}=="000d",	NAME="grdhid%n", MODE="0666"
+
