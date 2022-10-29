@@ -9,14 +9,18 @@ AM_INIT_AUTOMAKE
 
 AC_ARG_ENABLE([win64],
         [AS_HELP_STRING([--enable-win64],[build a Win64 emulator on AMD64 (won't run Win32 binaries)])])
-AC_ARG_WITH([winedlls],
-        [AC_HELP_STRING([--with-winedlls=PATH],[PATH to install .dll.so for Wine @<:@LIBDIR/wine@:>@])],
-        [winedlls="${withval}"],[winedlls="\$(libdir)/wine"])
+AC_ARG_WITH([wineso],
+        [AC_HELP_STRING([--with-wineso=PATH],[PATH to install .dll.so for Wine @<:@LIBDIR/wine@:>@])],
+        [wineso="${withval}"],[wineso="\$(libdir)/wine"])
+AC_ARG_WITH([winepe],
+        [AC_HELP_STRING([--with-winepe=PATH],[PATH to install .dll for Wine @<:@LIBDIR/wine@:>@])],
+        [winepe="${withval}"],[wineso="\$(libdir)/wine"])
 AC_ARG_WITH([wineincs],
         [AC_HELP_STRING([--with-wineincs=PATH],[PATH to Wine C header files @<:@INCLUDEDIR@:>@])],
         [wineincs="${withval}"],[wineincs="\$(includedir)"])
 
-AC_SUBST([winedlls])
+AC_SUBST([wineso])
+AC_SUBST([winepe])
 AC_SUBST([wineincs])
 
 AC_CANONICAL_HOST
